@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 120" width="760" height="240">
+  <title>Ops365 - Logo blanco para fondos oscuros</title>
+  <desc>Version monocromatica blanca del logo Ops365, para usar sobre fondos oscuros o azules</desc>
+  <g transform="translate(20, 28)">
+    <rect x="0" y="48" width="10" height="16" fill="#FFFFFF" opacity="0.9"/>
+    <rect x="14" y="36" width="10" height="28" fill="#FFFFFF"/>
+    <rect x="28" y="22" width="10" height="42" fill="#FFFFFF" opacity="0.75"/>
+    <rect x="42" y="8" width="10" height="56" fill="#FFFFFF" opacity="0.5"/>
+  </g>
+  <text x="92" y="60" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="600" fill="#FFFFFF" letter-spacing="-0.5">Ops365</text>
+  <line x1="92" y1="72" x2="245" y2="72" stroke="#FFFFFF" stroke-width="0.8" opacity="0.4"/>
+  <text x="92" y="88" font-family="Inter, 'Helvetica Neue', sans-serif" font-size="10" font-weight="500" fill="#FFFFFF" opacity="0.85" letter-spacing="2.2">FLOW · TEAM · CONTROL</text>
+</svg>
