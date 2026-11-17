@@ -122,10 +122,12 @@ p.body{font-size:16.5px;line-height:1.7;color:#2b3947;max-width:68ch;margin-bott
    section numbering is allowed (craft floor: numbering only when the order
    itself carries information, which the work cycle genuinely does) */
 .steps{margin-top:40px;position:relative;}
-.step{display:grid;grid-template-columns:84px 1fr;gap:28px;padding:34px 0;border-bottom:1px solid var(--line);position:relative;}
+.step{display:grid;grid-template-columns:84px 1fr;gap:28px;padding:34px 0;border-bottom:1px solid var(--line);position:relative;transition:background-color .15s;}
 .step:first-child{padding-top:0;}
 .step:last-child{border-bottom:none;}
-.step .num{font-size:52px;font-weight:800;color:var(--acc-dp);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em;}
+.step:not(.is-final):hover{background-color:var(--gray);}
+.step:not(.is-final):hover .num{transform:translateX(2px);}
+.step .num{font-size:52px;font-weight:800;color:var(--acc-dp);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em;transition:transform .15s;}
 .step h3{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:10px;text-transform:uppercase;letter-spacing:-.01em;}
 .step p{font-size:15.5px;line-height:1.6;color:#2b3947;max-width:60ch;}
 .step.is-final{background:var(--navy-deep);margin:0 -32px;padding:34px 32px;border-bottom:none;border-radius:4px;}
