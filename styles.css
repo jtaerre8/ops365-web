@@ -15,7 +15,7 @@ body{
 }
 h1,h2,h3,h4,p,ul,ol,figure{margin:0;padding:0;}
 h1,h2,h3,h4{font-family:'Manrope',system-ui,sans-serif;text-wrap:balance;letter-spacing:-.02em;color:var(--navy);}
-ul{list-style:none;}
+ul,ol{list-style:none;}
 a{color:var(--navy);text-decoration:none;}
 a:hover{color:var(--acc);}
 img,svg{max-width:100%;display:block;}
@@ -132,25 +132,6 @@ p.body{font-size:16.5px;line-height:1.7;color:#2b3947;max-width:68ch;margin-bott
 .step.is-final .num{color:var(--acc);}
 .step.is-final h3,.step.is-final p{color:#fff;}
 .step.is-final p{color:var(--blue-lt);}
-
-form.contact{max-width:560px;margin-top:28px;}
-form.contact label{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:6px;}
-form.contact .field{margin-bottom:18px;}
-form.contact input,form.contact select,form.contact textarea{
-  width:100%;padding:13px 14px;border:2px solid var(--line);border-radius:4px;font-size:15px;background:#fff;
-}
-form.contact input:focus,form.contact select:focus,form.contact textarea:focus{outline:none;border-color:var(--acc);}
-form.contact textarea{min-height:120px;resize:vertical;}
-form.contact .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-form.contact .consent{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#2b3947;}
-form.contact .consent input{width:auto;margin-top:3px;}
-form.contact .status{margin-top:14px;font-size:14px;font-weight:600;}
-form.contact .status.ok{color:#1a7a3c;}
-form.contact .status.err{color:#b00020;}
-
-.contact-info{display:flex;flex-direction:column;gap:14px;margin-top:28px;}
-.contact-info a{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:var(--navy);}
-.contact-info a:hover{color:var(--acc);}
 
 form.contact{max-width:560px;margin-top:28px;}
 form.contact label{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:6px;}
