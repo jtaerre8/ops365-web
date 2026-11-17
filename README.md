@@ -2,7 +2,7 @@
 
 Landing page de Ops365, empresa de outsourcing operativo y automatización para logística y bodegas en Chile.
 
-**Sitio web:** [www.ops365.cl](https://www.ops365.cl)
+**Sitio web:** [ops365.cl](https://ops365.cl)
 
 ---
 
@@ -63,11 +63,14 @@ Tu sitio estará disponible en: `https://[tu-usuario].github.io/[nombre-repo]/`
 
 ### Paso 4 — Conectar tu dominio ops365.cl
 
-Esto es lo que hace que tu web se vea en `www.ops365.cl` en lugar de la URL larga de GitHub.
+Esto es lo que hace que tu web se vea en `ops365.cl` en lugar de la URL larga de GitHub.
+El dominio principal (canónico) es el **apex** `ops365.cl` — así está configurado hoy en el
+archivo `CNAME` de este repo. `www.ops365.cl` queda como alias que GitHub redirige
+automáticamente al apex, siempre que el DNS tenga ambos registros (ver tabla abajo).
 
 **En GitHub:**
 1. En Settings → Pages
-2. En **"Custom domain"** escribe: `www.ops365.cl`
+2. En **"Custom domain"** escribe: `ops365.cl` (sin `www`)
 3. Clic en **"Save"**
 4. Marca la casilla **"Enforce HTTPS"** (puede tardar unos minutos en activarse)
 
@@ -87,13 +90,15 @@ Esto es lo que hace que tu web se vea en `www.ops365.cl` en lugar de la URL larg
 | `A` | `@` | `185.199.111.153` | 🟠 Proxied |
 
 ⚠️ **Importante:** las 4 IPs son las oficiales de GitHub Pages. Cópialas exactas.
+El registro `www` permite que `www.ops365.cl` también funcione y redirija al apex — no
+lo borres aunque el dominio principal sea `ops365.cl` sin `www`.
 
 5. La propagación tarda entre 5 min y 1 hora típicamente
 
 ### Paso 5 — Verificar
 
 1. Espera 10-15 minutos después de configurar todo
-2. Abre `www.ops365.cl` en una ventana incógnito
+2. Abre `ops365.cl` y `www.ops365.cl` en una ventana incógnito (la segunda debe redirigir a la primera)
 3. Si ves la web → ✅ todo funciona
 4. Si ves un error → espera más (DNS puede tardar)
 
