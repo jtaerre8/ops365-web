@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T04:30:00Z",
+  "title": "Design System: OPS365",
+  "extensions": {
+    "colorMeta": {
+      "navy": { "role": "primary", "displayName": "Ink Navy", "canonical": "#0C3B6E" },
+      "navy-deep": { "role": "neutral", "displayName": "Deep Navy", "canonical": "#06243F" },
+      "blue": { "role": "neutral", "displayName": "Muted Steel Blue", "canonical": "#3E6488" },
+      "blue-light": { "role": "neutral", "displayName": "Pale Steel Blue", "canonical": "#8EA8C1" },
+      "accent": { "role": "secondary", "displayName": "Signal Orange", "canonical": "#FF7A1A" },
+      "accent-deep": { "role": "secondary", "displayName": "Signal Orange Deep", "canonical": "#D95F06" },
+      "ink": { "role": "neutral", "displayName": "Near-Black Ink", "canonical": "#17212B" },
+      "surface-gray": { "role": "neutral", "displayName": "Paper Gray", "canonical": "#E8EDF2" },
+      "line": { "role": "neutral", "displayName": "Hairline Blue-Gray", "canonical": "#C9D6E2" },
+      "whatsapp-green": { "role": "utility", "displayName": "WhatsApp Green", "canonical": "#25D366" },
+      "whatsapp-green-deep": { "role": "utility", "displayName": "WhatsApp Green Deep", "canonical": "#1EBE5B" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page h1 only, one per page." },
+      "headline": { "displayName": "Headline", "purpose": "Section h2." },
+      "title": { "displayName": "Title", "purpose": "Component-level h3 (step headings, FAQ questions)." },
+      "lead": { "displayName": "Lead", "purpose": "One supporting sentence directly under an h1." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy, max 68ch." },
+      "label": { "displayName": "Label", "purpose": "Buttons, nav links, form field labels." }
+    },
+    "motion": [
+      { "name": "hover-lift", "value": "transform: translateY(-1px); transition: transform .15s", "purpose": "The one shared micro-interaction, applied to every button on hover." },
+      { "name": "cycle-dash", "value": "stroke-dashoffset animation, 7s linear infinite, stroke-dasharray 4 11", "purpose": "Slow flowing dash on the cycle-diagram ring, signalling the process loops. Disabled under prefers-reduced-motion." },
+      { "name": "reveal", "value": "opacity 0->1 + translateY(20px)->0, .7s cubic-bezier(.22,.61,.36,1)", "purpose": "Hero-only entrance moment (h1/lead/hero-panel). Not applied to repeated list items or pull-quotes, so it never reads as the same canned entrance on every section." }
+    ],
+    "breakpoints": [
+      { "name": "sidebar-collapse", "value": "980px" },
+      { "name": "mobile-tight", "value": "560px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Default call-to-action button: navy fill, orange on hover.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Cómo trabajamos</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:transform .15s,background .15s,color .15s,border-color .15s;text-decoration:none;} .ds-btn:hover{transform:translateY(-1px);} .ds-btn-primary{background:#0C3B6E;color:#fff;} .ds-btn-primary:hover{background:#FF7A1A;color:#fff;} .ds-btn-primary:focus-visible{outline:2px solid #FF7A1A;outline-offset:3px;}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action on a white surface: navy border, transparent fill.",
+      "html": "<a class=\"ds-btn ds-btn-ghost\" href=\"#\">Hablemos de tu operación</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:transform .15s,border-color .15s,color .15s;text-decoration:none;} .ds-btn:hover{transform:translateY(-1px);} .ds-btn-ghost{border:2px solid #0C3B6E;color:#0C3B6E;background:transparent;} .ds-btn-ghost:hover{border-color:#FF7A1A;color:#FF7A1A;}"
+    },
+    {
+      "name": "WhatsApp Button",
+      "kind": "button",
+      "refersTo": "button-wa",
+      "description": "The one button that breaks the two-color system on purpose: WhatsApp's own green, used only for the WhatsApp affordance.",
+      "html": "<a class=\"ds-btn ds-btn-wa\" href=\"#\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"#fff\"><path d=\"M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.5-.4-.5-.6-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.7 1.2 2.9.1.2 2 3.1 4.9 4.3 2.4 1 3 .9 3.5.8.6-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.3-.3zM12 21.5c-1.7 0-3.3-.5-4.7-1.3l-3.3.9.9-3.2c-1-1.5-1.5-3.2-1.5-5 0-4.8 3.9-8.7 8.6-8.7s8.6 3.9 8.6 8.7-3.9 8.6-8.6 8.6zm0-19.1C6.6 2.4 2.2 6.8 2.2 12.2c0 1.9.5 3.7 1.5 5.2L2 23l5.7-1.5c1.4.7 2.9 1.1 4.3 1.1 5.4 0 9.8-4.4 9.8-9.8S17.4 2.4 12 2.4z\"/></svg>WhatsApp</a>",
+      "css": ".ds-btn-wa{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;background:#25D366;color:#fff;text-decoration:none;transition:background .15s,transform .15s;} .ds-btn-wa:hover{background:#1EBE5B;transform:translateY(-1px);}"
+    },
+    {
+      "name": "Step Row",
+      "kind": "custom",
+      "refersTo": "step-row",
+      "description": "Signature list pattern for a real, meaningful sequence: large orange tabular number beside a navy title and body text, hairline-separated.",
+      "html": "<div class=\"ds-step\"><div class=\"ds-step-num\">01</div><div><h3 class=\"ds-step-title\">Consultoría en terreno</h3><p class=\"ds-step-body\">Observamos la operación donde ocurre, no desde una planilla.</p></div></div>",
+      "css": ".ds-step{display:grid;grid-template-columns:84px 1fr;gap:28px;padding:34px 0;border-bottom:1px solid #C9D6E2;} .ds-step-num{font-size:52px;font-weight:800;color:#FF7A1A;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em;} .ds-step-title{font-size:19px;font-weight:800;color:#0C3B6E;margin:0 0 10px;text-transform:uppercase;letter-spacing:-.01em;} .ds-step-body{margin:0;font-size:15.5px;line-height:1.6;color:#2b3947;max-width:60ch;}"
+    },
+    {
+      "name": "Band Dark",
+      "kind": "custom",
+      "refersTo": "band-dark",
+      "description": "The one navy-deep 'peak' section per page, holding a single oversized pull-quote with its key phrase in accent orange.",
+      "html": "<section class=\"ds-band-dark\"><p class=\"ds-pull\">Nuestro servicio de RPA toma los procesos administrativos y operativos que hoy consumen horas de tu equipo interno, y los deja funcionando solos. <strong>Se contrata por sí mismo, con o sin outsourcing.</strong></p></section>",
+      "css": ".ds-band-dark{background:#06243F;color:#fff;padding:120px 48px;} .ds-pull{font-size:clamp(24px,3.2vw,36px);line-height:1.3;font-weight:700;letter-spacing:-.01em;max-width:30ch;margin:0;} .ds-pull strong{color:#FF7A1A;font-weight:800;}"
+    },
+    {
+      "name": "Sidebar Navigation",
+      "kind": "nav",
+      "refersTo": "sidebar-nav",
+      "description": "Fixed desktop sidebar: navy-deep surface, blue-light links at rest, accent-tinted active state.",
+      "html": "<nav class=\"ds-sidebar\"><a class=\"ds-nav-link\" href=\"#\">Inicio</a><a class=\"ds-nav-link ds-nav-link--active\" href=\"#\">Operación</a><a class=\"ds-nav-link\" href=\"#\">Soluciones</a></nav>",
+      "css": ".ds-sidebar{background:#06243F;padding:12px;display:flex;flex-direction:column;gap:2px;width:220px;} .ds-nav-link{display:flex;align-items:center;padding:12px;border-radius:8px;font-size:13.5px;font-weight:600;color:#8EA8C1;text-decoration:none;transition:background .15s,color .15s;} .ds-nav-link:hover{background:rgba(255,255,255,.06);color:#fff;} .ds-nav-link--active{background:rgba(255,122,26,.14);color:#FF7A1A;}"
+    },
+    {
+      "name": "Mobile Fixed Action Bar",
+      "kind": "custom",
+      "refersTo": "mobile-action-bar",
+      "description": "Two-button bar fixed to the bottom of the viewport on mobile only, always visible regardless of scroll or menu state: WhatsApp green and accent orange.",
+      "html": "<div class=\"ds-mobbar\"><a class=\"ds-mobbar-wa\" href=\"#\">WhatsApp</a><a class=\"ds-mobbar-ct\" href=\"#\">Contacto</a></div>",
+      "css": ".ds-mobbar{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;} .ds-mobbar a{display:flex;align-items:center;justify-content:center;padding:16px 10px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;text-decoration:none;} .ds-mobbar-wa{background:#25D366;} .ds-mobbar-ct{background:#FF7A1A;}"
+    },
+    {
+      "name": "Form Field",
+      "kind": "input",
+      "refersTo": "form-field",
+      "description": "Text input / textarea / select: flat, bordered, orange focus ring via border recolor (no glow).",
+      "html": "<label class=\"ds-label\">Nombre<input class=\"ds-input\" type=\"text\"></label>",
+      "css": ".ds-label{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#0C3B6E;margin-bottom:6px;} .ds-input{width:100%;padding:13px 14px;border:2px solid #C9D6E2;border-radius:4px;font-size:15px;background:#fff;} .ds-input:focus{outline:none;border-color:#FF7A1A;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Site Foreman's Clipboard",
+    "overview": "OPS365 sells continuity: an operation that keeps moving while other people's problems don't. The system reads like a well-run site office, not a startup pitch deck — a fixed navy structure you can always find your way back to (the sidebar, the footer, the WhatsApp line), numbered sequences that mean something (the six-step cycle is a real process, not decoration), and exactly one loud color used sparingly enough that it still means \"pay attention here\" every time it appears. The system was built, then deliberately stripped of a first pass that read as generic AI output: small \"eyebrow\" labels above every heading, identical icon-card grids, and a colored side-border on callout boxes were all present at one point and removed on sight once recognized. None of the three come back.",
+    "keyCharacteristics": [
+      "Flat, bordered, high-contrast — no shadows, no gradients, no blur.",
+      "One navy-deep 'peak' band per page carries the single boldest claim; every other section stays on white.",
+      "Numbers are earned, not decorative: they appear only where a real sequence exists, never as a 01/02/03 label on an arbitrary list.",
+      "WhatsApp green is the one color from outside the palette, used only for the WhatsApp affordance itself."
+    ],
+    "rules": [
+      { "name": "The One Peak Rule", "body": "Each page gets exactly one navy-deep 'peak' band holding its single boldest claim. A page with zero peaks reads flat; a page with two or more has no climax.", "section": "colors" },
+      { "name": "The Earned Number Rule", "body": "A number is only ever shown where it reflects a real, meaningful sequence. It is never used to label an arbitrary list of features or cards.", "section": "colors" },
+      { "name": "The No-Eyebrow Rule", "body": "No small uppercase label ever sits above a heading to announce what the heading is about. The heading carries its own weight at full display size.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "No shadows, no blur, no glassmorphism anywhere. Depth comes from a navy-deep fill or a 2px border only.", "section": "elevation" },
+      { "name": "The No-Side-Tab Rule", "body": "A callout or note never gets a thick colored border on one side. Callouts get a flat gray background and nothing else.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do keep exactly one .band-dark peak per page.",
+      "Do keep the mobile WhatsApp/Contacto action bar fixed and visible on every page.",
+      "Do use the Step Row pattern for any future real sequence.",
+      "Do keep buttons' hover lift as the only shared micro-interaction."
+    ],
+    "donts": [
+      "Don't put a small uppercase 'eyebrow' label above any heading.",
+      "Don't give a card, list item, or callout a colored border-left/border-right.",
+      "Don't add a drop shadow anywhere.",
+      "Don't add numbers to a list unless the order itself carries real information.",
+      "Don't invent a testimonial, statistic, client logo, or case study to fill a section."
+    ]
+  }
+}
