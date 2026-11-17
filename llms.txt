@@ -1,0 +1,40 @@
+# OPS365
+
+> OPS365 combina personas, tecnología y automatización (RPA) para operar y mejorar
+> procesos de logística y bodega en empresas chilenas, mediante outsourcing operativo,
+> automatización de procesos y consultoría de externalización.
+
+OPS365 es una marca chilena (Santiago, Chile) operada por José Rondón Cabrera,
+actualmente en proceso de formalización societaria. Atiende a pymes y empresas de
+retail/logística en Chile que necesitan externalizar personal operativo, automatizar
+procesos administrativos repetitivos, o decidir qué externalizar y cómo.
+
+## Servicios
+
+- **Outsourcing operativo**: personal para turnos, picking, despacho y control de
+  inventario en bodega y logística.
+- **Automatización y RPA**: automatiza procesos administrativos y operativos
+  (conciliación de inventario, validación de guías, reportes) que hoy consumen horas
+  de trabajo manual.
+- **Consultoría de externalización**: diagnóstico de qué procesos conviene
+  externalizar, automatizar, o mantener internos.
+
+## Precios
+
+OPS365 cotiza cada servicio según el tamaño y complejidad de la operación del
+cliente; no tiene planes de precio fijo publicados. Para una cotización, contactar
+por los canales abajo.
+
+## Páginas clave
+
+- Inicio: https://ops365.cl/
+- Cómo trabajamos (el ciclo de 6 pasos): https://ops365.cl/operacion.html
+- Soluciones (outsourcing, RPA, consultoría): https://ops365.cl/soluciones.html
+- Contacto: https://ops365.cl/contacto.html
+- Política de privacidad: https://ops365.cl/privacidad.html
+- Aviso legal: https://ops365.cl/aviso-legal.html
+
+## Contacto
+
+- WhatsApp: +56 9 9450 5710
+- Correo: contacto@ops365.cl

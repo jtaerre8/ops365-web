@@ -1,3 +1,5 @@
+# Allow todo, incluidos los bots de IA (GPTBot, PerplexityBot, ClaudeBot,
+# anthropic-ai, Google-Extended, Bingbot): queremos que citen OPS365.
 User-agent: *
 Allow: /
 
