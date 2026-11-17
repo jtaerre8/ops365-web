@@ -91,36 +91,66 @@ main.page{margin-left:var(--sidebar-w);flex:1;min-width:0;}
 .mobbar svg{width:16px;height:16px;flex:none;fill:#fff;}
 
 /* ---------- shared content styling ---------- */
-.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px;}
-.eyebrow .bar{width:30px;height:2px;background:var(--acc);display:block;}
-.eyebrow span{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);}
-h1.page-title{font-size:clamp(34px,5vw,54px);line-height:1.04;font-weight:800;text-transform:uppercase;}
-.lead{font-size:18px;line-height:1.6;color:var(--blue);max-width:58ch;margin-top:18px;}
-section{padding:64px 0;border-bottom:1px solid var(--line);}
+h1.page-title{font-size:clamp(44px,7.5vw,92px);line-height:.96;font-weight:800;text-transform:uppercase;}
+.lead{font-size:19px;line-height:1.6;color:var(--blue);max-width:58ch;margin-top:22px;}
+section{padding:96px 0;border-bottom:1px solid var(--line);}
+section.tight{padding:56px 0;}
+section.peak{padding:120px 0;}
 section:last-of-type{border-bottom:none;}
-h2{font-size:clamp(24px,3.4vw,34px);font-weight:800;text-transform:uppercase;margin-bottom:16px;}
-p.body{font-size:16px;line-height:1.7;color:#2b3947;max-width:66ch;margin-bottom:16px;}
+h2{font-size:clamp(30px,4.6vw,48px);font-weight:800;text-transform:uppercase;margin-bottom:20px;line-height:1.02;}
+p.body{font-size:16.5px;line-height:1.7;color:#2b3947;max-width:68ch;margin-bottom:16px;}
 
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:transform .15s,background .15s,color .15s,border-color .15s;}
+.btn:hover{transform:translateY(-1px);}
 .btn-primary{background:var(--navy);color:#fff;}
 .btn-primary:hover{background:var(--acc);color:#fff;}
 .btn-wa{background:var(--wa);color:#fff;}
 .btn-wa:hover{background:var(--wa-dp);color:#fff;}
 .btn-ghost{border:2px solid var(--navy);color:var(--navy);}
 .btn-ghost:hover{border-color:var(--acc);color:var(--acc);}
+.on-dark .btn-ghost{border-color:rgba(255,255,255,.5);color:#fff;}
+.on-dark .btn-ghost:hover{border-color:var(--acc);color:var(--acc);}
 
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:28px;}
-.card{border:2px solid var(--line);padding:24px;border-radius:4px;}
-.card .n{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--acc);margin-bottom:10px;}
-.card h3{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:-.01em;}
-.card p{font-size:14.5px;line-height:1.55;color:var(--blue);}
+/* dark band — the one intentional visual peak per page */
+.band-dark{background:var(--navy-deep);color:#fff;}
+.band-dark h2{color:#fff;}
+.band-dark .pull{font-size:clamp(24px,3.2vw,36px);line-height:1.3;font-weight:700;letter-spacing:-.01em;max-width:30ch;}
+.band-dark .pull strong{color:var(--acc);font-weight:800;}
+.band-dark p.body{color:var(--blue-lt);}
 
-.steps{counter-reset:step;margin-top:28px;}
-.step{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);}
+/* numbered step list — real sequence, so the number stays; it's the one place
+   section numbering is allowed (craft floor: numbering only when the order
+   itself carries information, which the work cycle genuinely does) */
+.steps{margin-top:40px;position:relative;}
+.step{display:grid;grid-template-columns:84px 1fr;gap:28px;padding:34px 0;border-bottom:1px solid var(--line);position:relative;}
+.step:first-child{padding-top:0;}
 .step:last-child{border-bottom:none;}
-.step .num{font-size:28px;font-weight:800;color:var(--acc);}
-.step h3{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:8px;text-transform:uppercase;}
-.step p{font-size:15px;line-height:1.6;color:#2b3947;max-width:60ch;}
+.step .num{font-size:52px;font-weight:800;color:var(--acc);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em;}
+.step h3{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:10px;text-transform:uppercase;letter-spacing:-.01em;}
+.step p{font-size:15.5px;line-height:1.6;color:#2b3947;max-width:60ch;}
+.step.is-final{background:var(--navy-deep);margin:0 -32px;padding:34px 32px;border-bottom:none;border-radius:4px;}
+.step.is-final .num{color:var(--acc);}
+.step.is-final h3,.step.is-final p{color:#fff;}
+.step.is-final p{color:var(--blue-lt);}
+
+form.contact{max-width:560px;margin-top:28px;}
+form.contact label{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:6px;}
+form.contact .field{margin-bottom:18px;}
+form.contact input,form.contact select,form.contact textarea{
+  width:100%;padding:13px 14px;border:2px solid var(--line);border-radius:4px;font-size:15px;background:#fff;
+}
+form.contact input:focus,form.contact select:focus,form.contact textarea:focus{outline:none;border-color:var(--acc);}
+form.contact textarea{min-height:120px;resize:vertical;}
+form.contact .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+form.contact .consent{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#2b3947;}
+form.contact .consent input{width:auto;margin-top:3px;}
+form.contact .status{margin-top:14px;font-size:14px;font-weight:600;}
+form.contact .status.ok{color:#1a7a3c;}
+form.contact .status.err{color:#b00020;}
+
+.contact-info{display:flex;flex-direction:column;gap:14px;margin-top:28px;}
+.contact-info a{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:var(--navy);}
+.contact-info a:hover{color:var(--acc);}
 
 form.contact{max-width:560px;margin-top:28px;}
 form.contact label{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:6px;}
@@ -147,6 +177,23 @@ footer.sitefoot a{color:var(--blue-lt);}
 footer.sitefoot a:hover{color:#fff;}
 footer.sitefoot .links{display:flex;gap:18px;flex-wrap:wrap;}
 
+/* hero: text + a real secondary panel, so wide viewports don't read as empty */
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:end;}
+.hero-panel{border:2px solid var(--navy);}
+.hero-panel .hd{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.hero-panel ol{counter-reset:hp;}
+.hero-panel li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:baseline;padding:14px 18px;border-bottom:1px solid var(--line);font-size:13.5px;}
+.hero-panel li:last-child{border-bottom:none;}
+.hero-panel li b{font-variant-numeric:tabular-nums;color:var(--acc);font-weight:800;font-size:13px;}
+.hero-panel li span{color:var(--navy);font-weight:600;}
+
+/* browser surfaces carry the design too */
+::-webkit-scrollbar{width:11px;height:11px;}
+::-webkit-scrollbar-track{background:var(--gray);}
+::-webkit-scrollbar-thumb{background:var(--blue-lt);border:2px solid var(--gray);border-radius:6px;}
+::-webkit-scrollbar-thumb:hover{background:var(--acc);}
+html{scrollbar-color:var(--blue-lt) var(--gray);scrollbar-width:thin;}
+
 @keyframes barpulse{0%,100%{transform:scaleY(1);}45%{transform:scaleY(.42);}}
 .brand .opsbar{transform-box:fill-box;transform-origin:50% 100%;animation:barpulse 2.6s cubic-bezier(.55,0,.45,1) infinite;}
 @media (prefers-reduced-motion:reduce){.brand .opsbar{animation:none;}}
@@ -166,8 +213,14 @@ footer.sitefoot .links{display:flex;gap:18px;flex-wrap:wrap;}
   .row2{grid-template-columns:1fr !important;}
   form.contact .row2{grid-template-columns:1fr;}
   .cols{grid-template-columns:1fr !important;gap:36px !important;}
+  .hero-grid{grid-template-columns:1fr !important;gap:40px !important;}
+  section{padding:64px 0;}
+  section.peak{padding:72px 0;}
 }
 @media (max-width:560px){
   section{padding:48px 0;}
-  .step{grid-template-columns:40px 1fr;}
+  section.peak{padding:56px 0;}
+  .step{grid-template-columns:44px 1fr;gap:18px;}
+  .step .num{font-size:36px;}
+  .step.is-final{margin:0 -22px;padding:28px 22px;}
 }
