@@ -11,6 +11,8 @@
       "accent": { "role": "secondary", "displayName": "Signal Orange", "canonical": "#FF7A1A" },
       "accent-deep": { "role": "secondary", "displayName": "Signal Orange Deep", "canonical": "#D95F06" },
       "ink": { "role": "neutral", "displayName": "Near-Black Ink", "canonical": "#17212B" },
+      "body-ink": { "role": "neutral", "displayName": "Body Ink", "canonical": "#2b3947" },
+      "white": { "role": "neutral", "displayName": "White", "canonical": "#ffffff" },
       "surface-gray": { "role": "neutral", "displayName": "Paper Gray", "canonical": "#E8EDF2" },
       "line": { "role": "neutral", "displayName": "Hairline Blue-Gray", "canonical": "#C9D6E2" },
       "whatsapp-green": { "role": "utility", "displayName": "WhatsApp Green", "canonical": "#25D366" },

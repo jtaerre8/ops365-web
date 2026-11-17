@@ -9,6 +9,8 @@ colors:
   accent: "#FF7A1A"
   accent-deep: "#D95F06"
   ink: "#17212B"
+  body-ink: "#2b3947"
+  white: "#ffffff"
   surface-gray: "#E8EDF2"
   line: "#C9D6E2"
   whatsapp-green: "#25D366"
@@ -135,6 +137,12 @@ one thing that should get clicked.
   (footer links, sidebar nav at rest).
 - **Ink** (`#17212B`): the CSS `color` default; rarely seen directly since
   headings override to navy and body copy overrides to a near-black.
+- **Body Ink** (`#2b3947`): the actual rendered color of `p.body` and step
+  descriptions — slightly lighter/warmer than the `ink` default.
+- **White** (`#ffffff`): text and icon fill on every navy / navy-deep /
+  accent / WhatsApp-green surface; never a background on its own layer
+  (the page background is the implicit white, not a token applied per
+  component).
 - **Surface Gray** (`#E8EDF2`): note/callout backgrounds (legal-page asides).
 - **Line** (`#C9D6E2`): every hairline divider — section borders, step-list
   rules, input borders at rest.

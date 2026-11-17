@@ -63,7 +63,7 @@ main.page{margin-left:var(--sidebar-w);flex:1;min-width:0;}
 .mobtop .brand svg{width:24px;height:24px;}
 .mobtop .brand span{font-weight:800;font-size:17px;color:var(--navy);}
 .mobtop .brand span em{color:var(--acc);font-style:normal;}
-.hbtn{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:none;border:2px solid var(--navy);border-radius:8px;cursor:pointer;}
+.hbtn{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:2px solid var(--navy);border-radius:8px;cursor:pointer;}
 .hbtn span{position:relative;width:18px;height:2px;background:var(--navy);display:block;}
 .hbtn span::before,.hbtn span::after{content:'';position:absolute;left:0;width:18px;height:2px;background:var(--navy);transition:transform .2s;}
 .hbtn span::before{top:-6px;}
@@ -76,7 +76,7 @@ main.page{margin-left:var(--sidebar-w);flex:1;min-width:0;}
 .mobmenu nav a{padding:16px 6px;font-size:18px;font-weight:700;color:#fff;border-bottom:1px solid rgba(255,255,255,.1);}
 .mobmenu nav a.active{color:var(--acc);}
 .mobmenu .mm-legal{font-size:12px;color:var(--blue-lt);display:flex;gap:16px;flex-wrap:wrap;}
-.closebtn{position:absolute;top:18px;right:18px;width:40px;height:40px;background:none;border:2px solid rgba(255,255,255,.4);border-radius:8px;color:#fff;font-size:20px;cursor:pointer;}
+.closebtn{position:absolute;top:18px;right:18px;width:44px;height:44px;background:none;border:2px solid rgba(255,255,255,.4);border-radius:8px;color:#fff;font-size:20px;cursor:pointer;}
 
 /* fixed mobile action bar: WhatsApp + Contacto */
 .mobbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:80;}
@@ -125,11 +125,12 @@ p.body{font-size:16.5px;line-height:1.7;color:#2b3947;max-width:68ch;margin-bott
 .step{display:grid;grid-template-columns:84px 1fr;gap:28px;padding:34px 0;border-bottom:1px solid var(--line);position:relative;}
 .step:first-child{padding-top:0;}
 .step:last-child{border-bottom:none;}
-.step .num{font-size:52px;font-weight:800;color:var(--acc);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em;}
+.step .num{font-size:52px;font-weight:800;color:var(--acc-dp);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em;}
 .step h3{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:10px;text-transform:uppercase;letter-spacing:-.01em;}
 .step p{font-size:15.5px;line-height:1.6;color:#2b3947;max-width:60ch;}
 .step.is-final{background:var(--navy-deep);margin:0 -32px;padding:34px 32px;border-bottom:none;border-radius:4px;}
 .step.is-final .num{color:var(--acc);}
+/* on the navy-deep fill, full-strength accent clears 4.5:1 again */
 .step.is-final h3,.step.is-final p{color:#fff;}
 .step.is-final p{color:var(--blue-lt);}
 
@@ -165,7 +166,7 @@ footer.sitefoot .links{display:flex;gap:18px;flex-wrap:wrap;}
 .hero-panel ol{counter-reset:hp;}
 .hero-panel li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:baseline;padding:14px 18px;border-bottom:1px solid var(--line);font-size:13.5px;}
 .hero-panel li:last-child{border-bottom:none;}
-.hero-panel li b{font-variant-numeric:tabular-nums;color:var(--acc);font-weight:800;font-size:13px;}
+.hero-panel li b{font-variant-numeric:tabular-nums;color:var(--navy);font-weight:800;font-size:13px;}
 .hero-panel li span{color:var(--navy);font-weight:600;}
 
 /* cycle diagram — a real circle, visible on every screen size (not hidden on mobile) */
